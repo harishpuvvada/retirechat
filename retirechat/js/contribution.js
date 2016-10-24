@@ -162,7 +162,7 @@ function confirmValues() {
 $(function(){
  var buttoncont = $(contSubmit);
  buttoncont.attr('disabled','disabled');
-$('terms').change(function(e){
+$('#terms').change(function(e){
 
     if(this.checked){
               buttoncont.removeAttr('disabled');
