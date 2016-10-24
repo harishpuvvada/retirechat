@@ -157,6 +157,7 @@ if ($groupid == 11) {
             </div>
           </div>
           <button type="button" class="btn btn-default" onclick="location.href='home.php'">Back</button>
+          <input type="checkbox" name="formDoor[]" value="A" />I agree with percentages set by myself and other users<br />
           <input id="contSubmit" type="submit" class="btn btn-primary pull-right" value="Continue to next year">
         </div>
       </div>
