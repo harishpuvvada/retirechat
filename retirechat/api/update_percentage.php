@@ -6,9 +6,11 @@ $usercode = $_SESSION["usercode"];
 $year = $_SESSION["year"];
 $month = $_SESSION["month"];
 
+//$query = "SELECT name FROM fund";
 
+$fundpct = array();
 
-$query = "SELECT name,thisYear FROM fund ORDER BY fid ASC";
+$query = mysqli_prepare($conn, "SELECT fund1pct, fund2pct, fund3pct, fund4pct, fund5pct, fund6pct, fund7pct, fund8pct, fund9pct, fund10pct, totalvalue FROM activity ORDER BY modified DESC LIMIT 0,1";
 
 
 $name=array();
