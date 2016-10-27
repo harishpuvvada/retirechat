@@ -12,11 +12,6 @@ $fundpct = array();
 
 $query = mysqli_prepare($conn, "SELECT fund1pct, fund2pct, fund3pct, fund4pct, fund5pct, fund6pct, fund7pct, fund8pct, fund9pct, fund10pct, totalvalue FROM activity ORDER BY modified DESC LIMIT 0,1";
 
-
-$name=array();
-$thisYear = array();
-$total = 0; // number of rows
-
 if ($result = mysqli_query($connection, $query)) {
   while ($row = mysqli_fetch_row($result)) {
    /* $total++;
@@ -26,7 +21,7 @@ if ($result = mysqli_query($connection, $query)) {
 var_dump($row);
 echo "<h r/>";
 echo $row;
-
+echo "inside if";
 }
 }
 else{
