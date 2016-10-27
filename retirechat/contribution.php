@@ -1,5 +1,5 @@
 <?php
-// include 'api/funds.php';
+include 'api/funds.php';
 if (!isset($_SESSION["usercode"])) {
   header("Location: index.php");
 }
