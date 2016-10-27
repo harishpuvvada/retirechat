@@ -16,9 +16,9 @@ if ($result = mysqli_query($conn, $query)) {
     array_push($thisYear, $row[1]);*/
 
 var_dump($row);
-echo "<h r/>";
-//echo $row;
-echo "inside if";
+
+
+
 }
 }
 else{
