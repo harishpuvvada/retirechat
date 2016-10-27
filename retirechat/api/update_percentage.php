@@ -15,7 +15,17 @@ if ($result = mysqli_query($conn, $query)) {
     array_push($name, $row[0]);
     array_push($thisYear, $row[1]);*/
 
-var_dump($row);
+//var_dump($row);
+echo $row["fund1pct"]."<br />";
+echo $row["fund2pct"]."<br />";
+echo $row["fund3pct"]."<br />";
+echo $row["fund4pct"]."<br />";
+echo $row["fund5pct"]."<br />";
+echo $row["fund6pct"]."<br />";
+echo $row["fund7pct"]."<br />";
+echo $row["fund8pct"]."<br />";
+echo $row["fund9pct"]."<br />";
+echo $row["fund10pct"]."<br />";
 
 
 
