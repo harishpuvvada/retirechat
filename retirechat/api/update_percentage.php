@@ -17,7 +17,7 @@ if ($result = mysqli_query($conn, $query)) {
 
 var_dump($row);
 echo "<h r/>";
-echo $row;
+//echo $row;
 echo "inside if";
 }
 }
