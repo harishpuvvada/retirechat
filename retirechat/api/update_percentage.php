@@ -24,13 +24,15 @@ if ($result = mysqli_query($connection, $query)) {
     array_push($thisYear, $row[1]);*/
 
 var_dump($row);
-echo"<h r/>";
+echo "<h r/>";
+echo $row;
 
 }
 }
 else{
 
 echo "something wrong";
+
 }
 
 echo $result;
