@@ -71,6 +71,7 @@ App.getPercent = function() {
   });
 }
 
+
 function numberWithCommas(x) {
   x = x.toString();
   var pattern = /(-?\d+)(\d{3})/;
@@ -159,6 +160,7 @@ function confirmValues() {
   }
 }
 
+//author:Harry
 $(function(){
  var buttoncont = $(contSubmit);
  buttoncont.attr('disabled','disabled');

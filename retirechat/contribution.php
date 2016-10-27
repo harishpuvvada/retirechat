@@ -1,5 +1,5 @@
 <?php
-include 'api/funds.php';
+// include 'api/funds.php';
 if (!isset($_SESSION["usercode"])) {
   header("Location: index.php");
 }
@@ -16,9 +16,9 @@ $groupid = $_SESSION["groupid"];
 </head>
 <body>
 
-<?php 
-if ($groupid == 11) { 
-  include "label-modal-detailed.php"; 
+<?php
+if ($groupid == 11) {
+  include "label-modal-detailed.php";
 } else if ($groupid == 14 || $groupid == 15) {
   include "prospectus-container.php";
 } else {
@@ -51,20 +51,20 @@ if ($groupid == 11) {
     </div>
   </div>
 </div>
- 
+
   <form id="form" method="POST" name="contribution-form" action="home.php">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="page-header">
             <h1>Set this year's savings mix</h1>
-            <p>Specify how your savings for this year should be used to buy the funds below. Your choices will only affect this year. 
+            <p>Specify how your savings for this year should be used to buy the funds below. Your choices will only affect this year.
 <?php if ($groupid != 1) { ?>
 <p><strong class="red">Click on fund names to learn more about them</strong> - this will improve your chances of reaching your retirement goal.</p>
 <?php } ?>
 <?php if ($groupid == 14) { ?>
 <p><strong class="red">Pay attention to comments other users have made in the prospectus documents about which funds are good or bad.</strong> Selecting the best funds will help you reach your retirement goal. Selecting the worst funds will make it more difficult for you to reach your retirement goal.</p>
-<?php } ?> 
+<?php } ?>
 
 </p>
           </div>
@@ -103,7 +103,7 @@ if ($groupid == 11) {
                   if ($accept[$i]) {
                     $j++;
                     $class = "fund" . $j;
-  
+
                     echo
                     '<tr class="data_row">';
 
@@ -119,7 +119,7 @@ if ($groupid == 11) {
                     } else {
                       echo
                       ' <td></td>
-                      <td><span>' . $name[$i] . '</span></td>'; 
+                      <td><span>' . $name[$i] . '</span></td>';
                     }
 
                     echo
@@ -129,14 +129,23 @@ if ($groupid == 11) {
                     <td class="new_percentage">
                       <input id="' . $class . '-input" type="text" name="' . $class . '-percent" maxlength="4" size="4" class="form-control contribution-input" placeholder="0%"></td>
                     </tr>';
-                  }  
+                  }
                 }
+                // and in javascript (new file)
+                // it will use setInterval and $.ajax to
+                // update every table elements by tracking class name 'percentage'
+                // and if it detects any changes
+                // update it via update_percentage.php
+                // update_percentage.php will have a simple UPDATE query where
+                // fundname matches
+
+
                 ?>
                 <tr>
                   <td colspan="3">
- <?php if ($groupid != 1 && $groupid != 14 && $groupid != 15) { ?>                    
+ <?php if ($groupid != 1 && $groupid != 14 && $groupid != 15) { ?>
  <button type="button" class="btn btn-success" id="btn-compare">Compare funds</button>
-<?php } ?>  
+<?php } ?>
                   </td>
                   <td class="total">
                     Total <span class="total_percentage">0.00%</span>
@@ -172,11 +181,11 @@ if ($groupid == 11) {
   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/contribution.js" charset="utf-8"></script>
 <?php if ($groupid == 11) { ?>
-<script type="text/javascript" src="js/label-modal-detailed.js" charset ="utf-8"></script> 
+<script type="text/javascript" src="js/label-modal-detailed.js" charset ="utf-8"></script>
 <?php } else if ($groupid == 14 || $groupid == 15) { ?>
-<script type="text/javascript" src="js/prospectus-container.js" charset="utf-8"></script> 
+<script type="text/javascript" src="js/prospectus-container.js" charset="utf-8"></script>
 <?php } else { ?>
-<script type="text/javascript" src="js/label-modal.js" charset ="utf-8"></script> 
+<script type="text/javascript" src="js/label-modal.js" charset ="utf-8"></script>
 <?php } ?>
 </body>
 </html>

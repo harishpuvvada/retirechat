@@ -18,7 +18,7 @@ $accept = array();
 $accept2 = array();
 
 $current_total = 0;
-$total = 0;;
+$total = 0; // number of rows
 if ($result = mysqli_query($conn, $query)) {
   while ($row = mysqli_fetch_row($result)) {
     $total++;
@@ -42,4 +42,5 @@ if ($result = mysqli_query($conn, $query)) {
   }
 }
 
+echo $name;
 ?>
