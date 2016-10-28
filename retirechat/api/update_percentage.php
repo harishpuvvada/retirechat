@@ -42,12 +42,16 @@ echo "something wrong in 1";
 
 }
 
+$names=array();
+$count =0;
+
 if ($result2 = mysqli_query($conn, $query2)) {
   while ($row2 = mysqli_fetch_row($result2)) {
   
-
 //var_dump($row);
 //var_dump($row2);
+echo $row2[count]."<br />";
+count++;
 
 }
 }
@@ -57,14 +61,15 @@ echo "something wrong in 2";
 
 }
 
-$result = array_merge($result1, $result2);
 
 
-//echo $result1;
+echo $result1;
 
-echo $result;
+echo $names;
 
+$result = array_merge($result1, $names);
 
+echo json_encode($result);
 
 
 ?>
