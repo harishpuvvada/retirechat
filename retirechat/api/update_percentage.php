@@ -11,9 +11,10 @@ $query1 = "SELECT fund1pct, fund2pct, fund3pct, fund4pct, fund5pct, fund6pct, fu
 
 $query2 = "SELECT name FROM fund";
 
-
-
-
+$fundpcts=array();
+$names=array();
+$count =0;
+$count1=0;
 
 if ($result1 = mysqli_query($conn, $query1)) {
   while ($row = mysqli_fetch_assoc($result1)) {
@@ -22,7 +23,10 @@ if ($result1 = mysqli_query($conn, $query1)) {
     array_push($thisYear, $row[1]);*/
 
 //var_dump($row);
-echo $row["fund1pct"]."<br />";
+ $fundpcts[$count1]=$row[$count1];
+$count1++;
+
+/*echo $row["fund1pct"]."<br />";
 echo $row["fund2pct"]."<br />";
 echo $row["fund3pct"]."<br />";
 echo $row["fund4pct"]."<br />";
@@ -31,9 +35,7 @@ echo $row["fund6pct"]."<br />";
 echo $row["fund7pct"]."<br />";
 echo $row["fund8pct"]."<br />";
 echo $row["fund9pct"]."<br />";
-echo $row["fund10pct"]."<br />";
-
-
+echo $row["fund10pct"]."<br />";*/
 }
 }
 else{
@@ -42,10 +44,9 @@ echo "something wrong in 1";
 
 }
 
-$names=array();
-$count =0;
+echo $fundpcts;
 
-if ($result2 = mysqli_query($conn, $query2)) {
+/*if ($result2 = mysqli_query($conn, $query2)) {
   while ($row2 = mysqli_fetch_row($result2)) {
   
 //var_dump($row);
@@ -70,7 +71,7 @@ echo $names;
 $result = array_merge($result1, $names);
 
 echo json_encode($result);
-
+*/
 
 ?>
 
