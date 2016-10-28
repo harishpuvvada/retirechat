@@ -47,7 +47,7 @@ if ($result2 = mysqli_query($conn, $query2)) {
   
 
 //var_dump($row);
-var_dump($row2);
+//var_dump($row2);
 
 }
 }
