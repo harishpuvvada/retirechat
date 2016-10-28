@@ -57,11 +57,12 @@ echo "something wrong in 2";
 
 }
 
+$result = array_merge($result1, $result2);
 
 
-echo $result1;
+//echo $result1;
 
-echo $result2;
+echo $result;
 
 
 
