@@ -15,7 +15,7 @@ $query2 = "SELECT name FROM fund";
 
 
 
-if ($result = mysqli_query($conn, $query1)) {
+if ($result1 = mysqli_query($conn, $query1)) {
   while ($row = mysqli_fetch_assoc($result1)) {
    /* $total++;
     array_push($name, $row[0]);
@@ -42,12 +42,12 @@ echo "something wrong in 1";
 
 }
 
-if ($result = mysqli_query($conn, $query2)) {
-  while ($row = mysqli_fetch_assoc($result2)) {
+if ($result2 = mysqli_query($conn, $query2)) {
+  while ($row2 = mysqli_fetch_assoc($result2)) {
   
 
 //var_dump($row);
-var_dump($row);
+var_dump($row2);
 
 }
 }
