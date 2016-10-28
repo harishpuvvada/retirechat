@@ -43,7 +43,7 @@ echo "something wrong in 1";
 }
 
 if ($result2 = mysqli_query($conn, $query2)) {
-  while ($row2 = mysqli_fetch_assoc($result2)) {
+  while ($row2 = mysqli_fetch_row($result2)) {
   
 
 //var_dump($row);
