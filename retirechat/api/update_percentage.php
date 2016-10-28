@@ -44,7 +44,8 @@ echo "something wrong in 1";
 
 }
 
-echo $fundpcts;
+echo $fundpcts[1];
+
 
 /*if ($result2 = mysqli_query($conn, $query2)) {
   while ($row2 = mysqli_fetch_row($result2)) {
