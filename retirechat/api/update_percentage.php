@@ -57,7 +57,8 @@ else{
 echo "something wrong in 2";
 }
 
-echo $names;
+echo $names[0];
+echo $names[1];
 ?>
 
 
