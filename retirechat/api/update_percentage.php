@@ -23,8 +23,8 @@ if ($result1 = mysqli_query($conn, $query1)) {
     array_push($thisYear, $row[1]);*/
 
 //var_dump($row);
- $fundpcts[$count1]=$row[$count1];
-$count1++;
+ array_push($fundpcts, $row[0]);
+ $count1++;
 
 /*echo $row["fund1pct"]."<br />";
 echo $row["fund2pct"]."<br />";
@@ -44,36 +44,20 @@ echo "something wrong in 1";
 
 }
 
-echo $fundpcts[1];
+echo $fundpcts;
 
 
-/*if ($result2 = mysqli_query($conn, $query2)) {
-  while ($row2 = mysqli_fetch_row($result2)) {
-  
-//var_dump($row);
-//var_dump($row2);
-echo $row2[count]."<br />";
-count++;
-
+if ($result2 = mysqli_query($conn, $query2)) {
+ while ($row2 = mysqli_fetch_row($result2)) {
+$count++;
+array_push($name, $row[0]);
 }
 }
 else{
-
 echo "something wrong in 2";
-
 }
 
-
-
-echo $result1;
-
 echo $names;
-
-$result = array_merge($result1, $names);
-
-echo json_encode($result);
-*/
-
 ?>
 
 
