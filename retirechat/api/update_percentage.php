@@ -59,7 +59,9 @@ echo "something wrong in 2";
 
 
 
+echo $result1;
 
+echo $result2;
 
 
 
